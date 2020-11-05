@@ -12,7 +12,7 @@ struct Student{
 
 int main()
 {
-
+/*We are able to see that we created a student with the name Brian, he studies computer science, his gpa is 4.0 and he is 22 years old*/
 struct Student Student1;
  Student1.age = 22;
  Student1.Gpa = 4.0;
