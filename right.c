@@ -1,41 +1,35 @@
 #include<stdio.h>
-
-
+#define M 256
+#include<stdbool.h>
+//m is used to manifest some lowercase words or sentences in Upper case//
 
 int main(void){
-    int arr1[100];
-    int n, i, j, tmp;
+char Sentence[M];//This array will hold the word/sentence essential//
 
 
 
-       printf("\n\nSort elements of array in descending order :\n");
-       printf("----------------------------------------------\n");
+fgets(Sentence, M , stdin);
 
-    printf("Input the size of array : ");
-    scanf("%d", &n);
 
-       printf("Input %d elements in the array :\n",n);
-       for(i=0;i<n;i++)
-            {
-	      scanf("%d",&arr1[i]);
-	    }
-    for(i=0; i<n; i++)
-    {
-        for(j=i+1; j<n; j++)
-        {
-            if(arr1[i] < arr1[j])
-            {
-                tmp = arr1[i];
-                arr1[i] = arr1[j];
-                arr1[j] = tmp;
-            }
-        }
-    }
 
-     printf("\nElements of array is sorted in descending order:\n");
-    for(i=0; i<n; i++)
-    {
-        printf("%d  ", arr1[i]);
-    }
-	        printf("\n\n");
+int i=0;
+char ch;
+while(i < M  && Sentence[i] != '\0' ){
+    ch = Sentence[i];
+    if( (ch >= 'a' && ch <= 'z' )){
+    Sentence[i] = (Sentence[i] - 32);
+
+}
+
+
+
+  printf("%c", Sentence[i]);
+i++;
+
+}
+//This do-while loop condition is checked last in this loop//
+
+
+return 0;
+
 }
